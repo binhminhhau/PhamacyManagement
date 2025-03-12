@@ -21,6 +21,8 @@ namespace PhamacyManagement
         private void frmAdmin_Load(object sender, EventArgs e)
         {
             uC_DashBroad1.Visible=false;
+            btnDashBoard.PerformClick();
+            uC_AddUser1.Visible=false;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -39,11 +41,23 @@ namespace PhamacyManagement
         {
            uC_DashBroad1.Visible = true;
             uC_DashBroad1.BringToFront();
+            uC_AddUser1.Visible = false;
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void uC_DashBroad1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAddUser_Click(object sender, EventArgs e)
+        {
+            uC_AddUser1.Visible = true;
+            uC_AddUser1.BringToFront();
         }
     }
 }

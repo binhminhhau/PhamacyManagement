@@ -40,8 +40,13 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.uC_DashBroad1 = new PhamacyManagement.Admin.UC_DashBroad();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.uC_AddUser1 = new PhamacyManagement.Admin.UC_AddUser();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -61,6 +66,7 @@
             // 
             // btnLogOut
             // 
+            this.btnLogOut.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnLogOut.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnLogOut.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnLogOut.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -80,6 +86,7 @@
             // 
             // btnProfile
             // 
+            this.btnProfile.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnProfile.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnProfile.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnProfile.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -98,6 +105,7 @@
             // 
             // btnViewUser
             // 
+            this.btnViewUser.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnViewUser.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnViewUser.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnViewUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -116,6 +124,7 @@
             // 
             // btnAddUser
             // 
+            this.btnAddUser.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnAddUser.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnAddUser.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnAddUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -131,9 +140,11 @@
             this.btnAddUser.Size = new System.Drawing.Size(256, 66);
             this.btnAddUser.TabIndex = 3;
             this.btnAddUser.Text = "Add User";
+            this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
             // 
             // btnDashBoard
             // 
+            this.btnDashBoard.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnDashBoard.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnDashBoard.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnDashBoard.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -175,17 +186,46 @@
             // 
             // uC_DashBroad1
             // 
-            this.uC_DashBroad1.Location = new System.Drawing.Point(262, 0);
+            this.uC_DashBroad1.Location = new System.Drawing.Point(0, 0);
             this.uC_DashBroad1.Name = "uC_DashBroad1";
             this.uC_DashBroad1.Size = new System.Drawing.Size(1777, 1000);
             this.uC_DashBroad1.TabIndex = 1;
+            this.uC_DashBroad1.Load += new System.EventHandler(this.uC_DashBroad1_Load);
+            // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.TargetControl = this.panel1;
+            // 
+            // guna2Elipse2
+            // 
+            this.guna2Elipse2.TargetControl = this.panel2;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.uC_AddUser1);
+            this.panel2.Controls.Add(this.uC_DashBroad1);
+            this.panel2.Location = new System.Drawing.Point(256, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1777, 1000);
+            this.panel2.TabIndex = 2;
+            // 
+            // guna2Elipse3
+            // 
+            this.guna2Elipse3.TargetControl = this.panel2;
+            // 
+            // uC_AddUser1
+            // 
+            this.uC_AddUser1.Location = new System.Drawing.Point(0, 0);
+            this.uC_AddUser1.Name = "uC_AddUser1";
+            this.uC_AddUser1.Size = new System.Drawing.Size(1901, 1152);
+            this.uC_AddUser1.TabIndex = 2;
             // 
             // frmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1924, 1005);
-            this.Controls.Add(this.uC_DashBroad1);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -196,6 +236,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -212,5 +253,9 @@
         private Guna.UI2.WinForms.Guna2Button btnAddUser;
         private Admin.UC_DashBroad uC_DashBroad1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
+        private System.Windows.Forms.Panel panel2;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse3;
+        private Admin.UC_AddUser uC_AddUser1;
     }
 }

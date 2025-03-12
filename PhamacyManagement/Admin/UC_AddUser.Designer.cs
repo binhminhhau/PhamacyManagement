@@ -134,6 +134,9 @@
             this.txtRole.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txtRole.ForeColor = System.Drawing.Color.Black;
             this.txtRole.ItemHeight = 30;
+            this.txtRole.Items.AddRange(new object[] {
+            "Admin",
+            "User"});
             this.txtRole.Location = new System.Drawing.Point(100, 256);
             this.txtRole.Name = "txtRole";
             this.txtRole.Size = new System.Drawing.Size(340, 36);
@@ -324,7 +327,7 @@
             // 
             // guna2Elipse1
             // 
-            this.guna2Elipse1.TargetControl = this.panel1;
+            this.guna2Elipse1.TargetControl = this;
             // 
             // UC_AddUser
             // 
