@@ -355,6 +355,7 @@
             this.Controls.Add(this.label1);
             this.Name = "UC_AddUser";
             this.Size = new System.Drawing.Size(1901, 1152);
+            this.Load += new System.EventHandler(this.UC_AddUser_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictrAddUser)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -76,6 +76,7 @@
     <Compile Include="frmAdmin.Designer.cs">
       <DependentUpon>frmAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="function.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Admin\UC_AddUser.resx">
