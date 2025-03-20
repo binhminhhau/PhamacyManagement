@@ -41,6 +41,7 @@
     <Reference Include="System.Design" />
     <Reference Include="System.Management" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -52,6 +53,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DGVPrinter.cs" />
+    <Compile Include="Users\UC_AddMedicine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Users\UC_AddMedicine.Designer.cs">
+      <DependentUpon>UC_AddMedicine.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin\UC_AddUser.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -63,6 +71,42 @@
     </Compile>
     <Compile Include="Admin\UC_DashBroad.Designer.cs">
       <DependentUpon>UC_DashBroad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UC_Profile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\UC_Profile.Designer.cs">
+      <DependentUpon>UC_Profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UC_ViewUsers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\UC_ViewUsers.Designer.cs">
+      <DependentUpon>UC_ViewUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\UC_SellMedicine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Users\UC_SellMedicine.Designer.cs">
+      <DependentUpon>UC_SellMedicine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\UC_UpdateMedicine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Users\UC_UpdateMedicine.Designer.cs">
+      <DependentUpon>UC_UpdateMedicine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\UC_ViewCheckAvailbility.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Users\UC_ViewCheckAvailbility.Designer.cs">
+      <DependentUpon>UC_ViewCheckAvailbility.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\UC_ViewMedicine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Users\UC_ViewMedicine.Designer.cs">
+      <DependentUpon>UC_ViewMedicine.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -76,20 +120,56 @@
     <Compile Include="frmAdmin.Designer.cs">
       <DependentUpon>frmAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUser.Designer.cs">
+      <DependentUpon>FrmUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="function.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Users\UC_DashBoard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Users\UC_DashBoard.Designer.cs">
+      <DependentUpon>UC_DashBoard.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Users\UC_AddMedicine.resx">
+      <DependentUpon>UC_AddMedicine.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin\UC_AddUser.resx">
       <DependentUpon>UC_AddUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\UC_DashBroad.resx">
       <DependentUpon>UC_DashBroad.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Admin\UC_Profile.resx">
+      <DependentUpon>UC_Profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\UC_ViewUsers.resx">
+      <DependentUpon>UC_ViewUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\UC_SellMedicine.resx">
+      <DependentUpon>UC_SellMedicine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\UC_UpdateMedicine.resx">
+      <DependentUpon>UC_UpdateMedicine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\UC_ViewCheckAvailbility.resx">
+      <DependentUpon>UC_ViewCheckAvailbility.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\UC_ViewMedicine.resx">
+      <DependentUpon>UC_ViewMedicine.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAdmin.resx">
       <DependentUpon>frmAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUser.resx">
+      <DependentUpon>FrmUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -100,6 +180,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Users\UC_DashBoard.resx">
+      <DependentUpon>UC_DashBoard.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -114,5 +197,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
