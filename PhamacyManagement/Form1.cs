@@ -7,13 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PhamacyManagement.Admin;
 
 namespace PhamacyManagement
 {
     public partial class Form1 : Form
     {
+        function fn = new function();
+        string query;
+        DataSet ds;
 
-        
         public Form1()
         {
             InitializeComponent();
@@ -21,7 +24,7 @@ namespace PhamacyManagement
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.AcceptButton = btnSign; // Khi nhấn Enter, nút btnLogin sẽ được kích hoạt
+            this.AcceptButton = btnSign; 
 
         }
 
@@ -56,18 +59,43 @@ namespace PhamacyManagement
             Application.Exit();
         }
 
+       
         private void btnSign_Click(object sender, EventArgs e)
         {
-            if (txtUsername.Text == "Minh" && txtPassword.Text == "1")
+            if (txtUsername.Text == "root" && txtPassword.Text == "root")
             {
-                frmAdmin adm = new frmAdmin();
+                frmAdmin adm = new frmAdmin(txtUsername.Text);
                 adm.Show();
                 this.Hide();
             }
-            else { 
-            MessageBox.Show("Tên đăng nhập hoặc mật khẩu không đúng","Lỗi",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            else
+            {
+                query = "select * from users where username = '" + txtUsername.Text + "' and pass = '" + txtPassword.Text + "'";
+                ds = fn.getData(query);
+
+                if (ds.Tables[0].Rows.Count != 0)
+                {
+                    string role = ds.Tables[0].Rows[0]["userRole"].ToString();
+                    if (role == "Admin")
+                    {
+                        frmAdmin adm = new frmAdmin(txtUsername.Text);
+                        adm.Show();
+                        this.Hide();
+                    }
+                    else if (role == "User")
+                    {
+                        FrmUser user = new FrmUser();
+                        user.Show();
+                        this.Hide();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Tên đăng nhập hoặc mật khẩu không đúng", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
+
 
         private void btnReload_Click(object sender, EventArgs e)
         {
