@@ -64,6 +64,7 @@
             this.uC_AddMedicine2 = new PhamacyManagement.Admin.UC_AddMedicine();
             this.uC_AddMedicine1 = new PhamacyManagement.Admin.UC_AddMedicine();
             this.uC_ViewUsers1 = new PhamacyManagement.Admin.UC_ViewUsers();
+            this.uC_AddMedicine4 = new PhamacyManagement.Admin.UC_AddMedicine();
             this.uC_DashBoard1 = new PhamacyManagement.User_Medicine.UC_DashBoard();
             this.uS_ViewMedicine1 = new PhamacyManagement.Admin.UC_ViewMedicine();
             this.uC_SellMedicine1 = new PhamacyManagement.Users.UC_SellMedicine();
@@ -419,6 +420,13 @@
             this.uC_ViewUsers1.Size = new System.Drawing.Size(1481, 800);
             this.uC_ViewUsers1.TabIndex = 1;
             // 
+            // uC_AddMedicine4
+            // 
+            this.uC_AddMedicine4.Location = new System.Drawing.Point(234, 0);
+            this.uC_AddMedicine4.Name = "uC_AddMedicine4";
+            this.uC_AddMedicine4.Size = new System.Drawing.Size(1111, 650);
+            this.uC_AddMedicine4.TabIndex = 0;
+            // 
             // uC_DashBoard1
             // 
             this.uC_DashBoard1.Location = new System.Drawing.Point(312, 0);
@@ -460,6 +468,7 @@
             this.Controls.Add(this.uC_ViewMedicine2);
             this.Controls.Add(this.uC_AddMedicine5);
             this.Controls.Add(this.guna2Panel1);
+            this.Controls.Add(this.uC_AddMedicine4);
             this.Controls.Add(this.uC_DashBoard1);
             this.Controls.Add(this.guna2Panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -495,6 +504,7 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
         private User_Medicine.UC_DashBoard uC_DashBoard1;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
         private Admin.UC_AddMedicine uC_AddMedicine1;
         private Admin.UC_AddMedicine uC_AddMedicine3;
         private Admin.UC_AddMedicine uC_AddMedicine2;

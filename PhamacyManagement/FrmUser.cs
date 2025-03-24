@@ -26,6 +26,8 @@ namespace PhamacyManagement
             uC_ViewCheckAvailbility1.Visible = false;
             uC_SellMedicine2.Visible = false;
             BtnDashBroadM.PerformClick();
+
+
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)

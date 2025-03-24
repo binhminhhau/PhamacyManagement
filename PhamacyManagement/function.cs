@@ -14,9 +14,9 @@ namespace PhamacyManagement
         
         public SqlConnection GetConnection()
         {
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\tieuc\Documents\pharmacy.mdf;Integrated Security=True;Connect Timeout=30");
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\ADMIN\Documents\Pharmacy.mdf;Integrated Security=True;Connect Timeout=30");
+            con.ConnectionString = "data source = Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\Legion\\OneDrive - Phenikaa University\\Documents\\phamacy.mdf\";Integrated Security=True;Connect Timeout=30;Encrypt=True";
             return con;
-        }
 
         public DataSet getData(string query, params SqlParameter[] parameters)
         {
@@ -43,7 +43,7 @@ namespace PhamacyManagement
 
 
 
-
+            return ds;
         //public DataSet getData(String query)
         //{
         //    SqlConnection con = GetConnection();
@@ -70,7 +70,7 @@ namespace PhamacyManagement
 
         //    MessageBox.Show(msg,"Information", MessageBoxButtons.OK,MessageBoxIcon.Information);
 
-
+        }
         //}
         public void setData(string query, string msg)
         {
@@ -83,6 +83,7 @@ namespace PhamacyManagement
                     con.Close();
                 }
             }
+            MessageBox.Show(msg,"Information",MessageBoxButtons.OK,MessageBoxIcon.Information);
 
             MessageBox.Show(msg, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
